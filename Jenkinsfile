@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clonar') {
             steps {
-                git url 'https://github.com/bguzmanm/saludoapp.git'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/bguzmanm/saludoapp.git']]])
             }
         }
 
