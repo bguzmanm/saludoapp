@@ -31,13 +31,13 @@ pipeline {
             }
         }
 
-        post {
-            success {
-                echo '🎉 El build fue exitoso'
-            }
-            failure {
-                echo '💥 El build falló'
-            }
+    }
+    post {
+        success {
+            echo '🎉 El build fue exitoso'
+        }
+        failure {
+            echo '💥 El build falló'
         }
     }
 }
