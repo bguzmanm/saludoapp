@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+env:
+  ACTIONS_RUNNER_DEBUG: true
 
 jobs:
   build:
@@ -18,7 +20,7 @@ jobs:
   test:
     needs: build
     runs-on: ubuntu-latest
+
     steps:
       - name: Ejecutar Pruebas
-        run: cd.. 
-            mvn test
+        run: mvn test
