@@ -10,15 +10,15 @@ jobs:
 
     steps:
       - name: Checkout Código
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Compilar Código
-        run: cd .. 
-            mvn clean package
+        run: mvn clean package
 
   test:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Ejecutar Pruebas
-        run: mvn test
+        run: cd.. 
+            mvn test
